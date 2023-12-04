@@ -1,0 +1,47 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. MANIP.
+DATA DIVISION.
+    WORKING-STORAGE SECTION.
+        77 a PIC 99.
+        77 b PIC 99.
+        77 c PIC 99.
+        77 init PIC 99.
+        
+SCREEN SECTION.
+1 pla-res.
+    2 BLANK SCREEN.
+    2 LINE 5 COL 10 'C vaut : '.
+    2 PIC 99 FROM c.
+    2 COL 12 ' - '.
+    2 COL 14 'B : '.
+    2 PIC 99 FROM b.
+    2 COL 16 ' - '.
+    2 COL 18 'A : '.
+    2 PIC 99 FROM a.
+
+1 pla-resB.
+    2 BLANK SCREEN.
+    2 LINE 5 COL 10 'C vaut maintenant : '.
+    2 PIC 99 FROM c.
+
+1 pla-ini.
+    2 BLANK SCREEN.
+    2 LINE 5 COL 10 'Pour init :'.
+    2 PIC 99 FROM init.
+
+PROCEDURE DIVISION.
+*MOVE attribue une valeur
+MOVE 37 TO b c.
+*COMPUTE va calculer
+COMPUTE a = c + b.
+DISPLAY pla-res.
+
+*ADD va ajouter
+ADD a TO c.
+DISPLAY pla-resB.
+
+*initialize va permettre de gérer une valeur NULL
+INITIALIZE init.
+DISPLAY pla-ini.
+
+STOP RUN.

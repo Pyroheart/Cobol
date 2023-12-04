@@ -1,0 +1,30 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. tuto.
+
+*partie déclaration de variables
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+    77 nomVariable PIC type.
+*77 etiquette PIC variableFormat ; 9, 9(5), etc
+*structure de variable possible
+    1 personne.
+         2 nom PIC x(30).
+         2 prenom PIC x(30).
+         2 adresse.
+            3 numero PIC 9(3).
+            3 rue PIC x (40).
+            3 code postal PIC x(5).
+            3 ville PIC x(20).
+
+*partie logique
+SCREEN SECTION.
+    1 instruction.
+
+*partie instruction
+PROCEDURE DIVISION.
+instruction1.
+instruction2.
+etc.
+
+*fin du programme
+STOP RUN.

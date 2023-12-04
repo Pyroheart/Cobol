@@ -1,0 +1,34 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. ProductProgram.
+
+ENVIRONMENT DIVISION.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 Num1 PIC 9(5).
+01 Num2 PIC 9(5).
+01 Product PIC 9(10).
+
+SCREEN SECTION.
+
+      1 pls-num1.
+          2 LINE 6 COL 10 VALUE "Enter first number: ".
+          2 COLUMN 12 PIC 9(5) TO Num1 REQUIRED.
+
+      1 pls-num2.
+          2 LINE 6 COL 10 VALUE "Enter second number: ".
+          2 COLUMN 12 PIC 9(5) TO Num2 REQUIRED.
+
+      1 pla-product.
+          2 LINE 10 COL 8 VALUE 'The product is: '.
+          2 COL 12 PIC x(25) FROM Product.
+
+PROCEDURE DIVISION.
+      DISPLAY pls-num1. 
+      ACCEPT pls-num1.  
+      DISPLAY pls-num2. 
+      ACCEPT pls-num2.
+      
+      COMPUTE Product = Num1 * Num2.
+      DISPLAY pla-product.
+    
+STOP RUN.

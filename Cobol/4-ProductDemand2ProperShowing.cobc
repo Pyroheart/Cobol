@@ -1,0 +1,18 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. ProductProgram.
+
+ENVIRONMENT DIVISION.
+DATA DIVISION.
+WORKING-STORAGE SECTION.
+01 Num1 PIC 9(5).
+01 Num2 PIC 9(5).
+01 Product PIC 9(10).
+
+PROCEDURE DIVISION.
+    DISPLAY "Enter first number: ".
+    ACCEPT Num1.
+    DISPLAY "Enter second number: ".
+    ACCEPT Num2.
+    COMPUTE Product = Num1 * Num2.
+    DISPLAY "The product is: " Product.
+    STOP RUN.
